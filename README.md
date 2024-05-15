@@ -39,6 +39,7 @@ This is a transnational data set which contains all the transactions occurring b
 
 ## Pipeline
 
+Starting from a CSV file the data will be ingested into BigQuery, task orchestrated with Airflow. The next step is to run quality checks on the data using Soda, a data quality framework. Once the checks are done the data, the Data Modelling design takes place. This is done task using dbt to generate the fact and the dimension tables is run.
 
 ![alt text](Pipeline.png)
 
