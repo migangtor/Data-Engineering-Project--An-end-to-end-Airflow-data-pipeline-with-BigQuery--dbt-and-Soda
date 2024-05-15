@@ -1,2 +1,8 @@
-Data Modelling
-![alt text](image.png)ß
+
+## Pipeline
+
+![alt text](Pipeline.png)
+
+## Data Modelling
+
+![alt text](Data_Modelling.png)
