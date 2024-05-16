@@ -4,6 +4,8 @@
 
 1. [Executive Summary](#executive-summary)
 2. [Dataset Description](#dataset-description)
+3. [Pipeline Outlook](#pipeline)
+
 
 ## Executive Summary
 
@@ -18,7 +20,7 @@ The source data for this exercise comes from Kaggle and the data can be found on
 
 Dr Daqing Chen, Director: Public Analytics group. chend '@' lsbu.ac.uk, School of Engineering, London South Bank University, London SE1 0AA, UK.
 
-#### Data Set Information:
+#### Dataset Information:
 
 This is a transnational data set which contains all the transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based and registered non-store online retail.The company mainly sells unique all-occasion gifts. Many customers of the company are wholesalers.
 
@@ -37,9 +39,16 @@ This is a transnational data set which contains all the transactions occurring b
 
 
 
-## Pipeline
+## Pipeline Outlook
 
-Starting from a CSV file the data will be ingested into BigQuery, task orchestrated with Airflow. The next step is to run quality checks on the data using Soda, a data quality framework. Once the checks are done the data, the Data Modelling design takes place. This is done task using dbt to generate the fact and the dimension tables is run.
+1. Starting from a CSV file the data will be ingested into BigQuery, task orchestrated with Airflow. 
+2. Run quality checks on the data using Soda, a data quality framework. 
+3. Data Modelling. This task uses dbt to generate the fact and the dimension tables and Cosmos package to integrate dbt with Airflow.Cosmos allows to see all the dbt models making them tasks in the data pipeline allowing better visibility. 
+4. Data quality checks on the Fact and Dimension table
+5. Run the models on dbt to develop the semantic layer
+6. Data quality checks on the semantic layer
+7. Finally BI reporting will be created from the semantic layer
+
 
 ![alt text](Pipeline.png)
 
@@ -51,7 +60,7 @@ Starting from a CSV file the data will be ingested into BigQuery, task orchestra
 ## Prerequisites
 
 - Docker
-- Astro CLI
+- [Astro CLI](https://docs.astronomer.io/astro/cli/overview): the easiest way to run Airflow
 - Soda
 - GC account
 
