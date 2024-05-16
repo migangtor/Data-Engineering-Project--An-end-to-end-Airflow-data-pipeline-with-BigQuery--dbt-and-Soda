@@ -65,6 +65,10 @@ This is a transnational data set which contains all the transactions occurring b
 - GC account
 
 ### Steps
-- Create a virtual environment
+1. Initialize the Astro development environment
+    Shell: astro dev init
+2. 
 
+### Resources
 
+https://www.youtube.com/watch?v=DzxtCxi4YaA
