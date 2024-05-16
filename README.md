@@ -64,4 +64,7 @@ This is a transnational data set which contains all the transactions occurring b
 - Soda
 - GC account
 
+### Steps
+- Create a virtual environment
+
 
