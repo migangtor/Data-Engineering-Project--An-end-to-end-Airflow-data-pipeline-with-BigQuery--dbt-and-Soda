@@ -66,8 +66,9 @@ This is a transnational data set which contains all the transactions occurring b
 
 ### Steps
 1. Initialize the Astro development environment
-    Shell: astro dev init
-2. 
+    - Shell: astro dev init
+2. Start running the containers
+    - Shell: astro dev start
 
 ### Resources
 
